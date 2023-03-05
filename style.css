@@ -1,0 +1,518 @@
+* {box-sizing: border-box;}
+
+html {
+scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+  background: #1C1A1A;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+#navbar {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  margin:auto;
+  margin-bottom: 0;
+  margin-top: 88px;
+}
+#navbar a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+  transition: color 0.5s;
+  padding: 0 30px 28px;
+}
+#navbar a:hover {
+  color: #FF7628;
+}
+#navbar a.registr{
+  color: #FF7628;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logic img{
+  margin: auto;
+  width: 100%;
+  max-width: 1171px;
+  height: auto;
+  padding: 120px 0 180px
+}
+
+.opisanie{
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+
+.zagolovok{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 110px;
+  line-height: 135px;
+  color: #FF7628;
+  padding: 100px 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1300px;
+}
+.swiper-slide img{
+  width: 385px;
+}
+
+.nazvanie{
+  padding: 30px;
+}
+
+#button_1, #button_2, #button_3 {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+#kino_1, #kino_2, #kino_3{
+  display: none;
+  padding: 50px 0 0;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#opis_film{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  padding: 0;
+}
+.opis_text{
+  display: inline-block;
+  width: 100%;
+  max-width: 655px;
+  text-align: left;
+  padding: 0 0 0 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.opis_nazv{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 54px;
+  color: #FF7628;
+}
+.opis_ocenka{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #999595;
+  padding: 15px 0 45px;
+}
+.treiler{
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline-block;
+}
+
+.gdeikogda{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0 250px;
+}
+.gdeikogdachild{
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-right: 70px;
+  display: inline-block;
+}
+.kogda{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 54px;
+  color: #FFFFFF;
+  text-align: left;
+}
+.gde{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  text-align: left;
+  padding: 60px 0 50px;
+}
+
+
+
+
+.iw-modal-btn{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px;
+  background-color: #FF7628;
+  color: #181515;
+  border-radius: 90px;
+  text-decoration: none;
+  padding: 44px 165px 54px;
+  transition: box-shadow 0.5s;
+}
+.iw-modal-btn:hover{
+  box-shadow: 0 0 20px #FF7628;
+
+}
+
+/*CSS-свойства для заднего фона модального окна*/
+.iw-modal {
+	opacity: 0; /*изначально этот блок должен быть прозрачным*/
+	background: rgba(0,0,0,0.7); /*задаём цвет фона*/
+	pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+ 	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+	transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.iw-modal:target {
+    opacity: 1; /*при клике окно становится видимым*/
+	pointer-events: auto; /*теперь по окну можно кликать мышкой*/
+  overflow-y: auto;   /*прокрутка по вертикли страницы*/
+}
+
+.iw-modal-wrapper {
+	margin:auto; /*выравниваем окно по центру по горизонтали*/
+	margin-top: 100px; /*отступ сверху можно задавать в px, % или vh*/
+  overflow: auto;
+}
+.iw-modal-wrapper1 {
+	margin:auto; /*выравниваем окно по центру по горизонтали*/
+	margin-top: 200px; /*отступ сверху можно задавать в px, % или vh*/
+  overflow: auto;
+}
+
+/*CSS-свойства для блока, содержащего контент модального окна */
+.iw-CSS-modal-inner {
+    position: relative;
+    background: #1C1A1A; /*цвет фона*/
+    border-radius: 23px; /*радиус скругления углов*/
+    padding: 35px 40px 82px 84px;
+}
+.iw-CSS-modal-inner1 {
+    position: relative;
+    background: #1C1A1A; /*цвет фона*/
+    border-radius: 23px; /*радиус скругления углов*/
+    padding: 35px 40px 0 84px;
+}
+
+/*CSS-свойства заголовка модального окна */
+.iw-modal-header {
+    padding: 0 0 25px 0;/*внутренний отступ*/
+    border-radius: 4px 4px 0 0;
+	  position:relative;
+}
+.iw-modal-title-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 70px;
+  color: #FF7628;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 55px 0 0;
+}
+.iw-modal-title-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 28px;
+  color: #FFFFFF;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 42px 0 0;
+}
+.iw-modal-title-3 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FF7628;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 9px 0 0;
+}
+.iw-modal-title-4 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  color: #FFFFFF;
+	margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 26px 0 68;
+}
+
+
+/*CSS для кнопки закрытия окна*/
+.iw-close {
+    position:absolute;
+	top:-20px; /*отступ сверху*/
+	right:-4px; /*отступ справа*/
+    font-size: 55px; /*размер шрифта*/
+    color: #D29772; /*цвет шрифта*/
+    text-decoration: none;
+}
+
+.iw-close:hover, .iw-close:focus {
+    color: #FF7628; /*цвет шрифта при наведении*/
+    cursor: pointer;
+}
+
+/*CSS для блока с текстом модального окна*/
+
+.iw-modal-text {
+  padding: 0; /*внутренний отступ*/
+  text-align: left;
+}
+.iw-modal-text1 {
+  padding: 30 0 0; /*внутренний отступ*/
+  text-align: center;
+}
+
+/**MEDIA**/
+@media (min-width: 650px) {
+  .iw-modal-wrapper {
+      max-width: 650px;
+   }
+   .iw-modal-wrapper1 {
+       max-width: 650px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 650px){
+  .iw-modal-wrapper {
+      margin-top: 30%;
+   }
+  .iw-modal-wrapper1 {
+      margin-top: 20%;
+   }
+}
+.form {
+        display: inline-block;
+        padding: 0;
+        letter-spacing: 1px;
+        align-items: center;
+        }
+
+.form_button {
+         padding: 19px 0;
+         border: none;
+         border-radius: 46px;
+         color : #FFFFFF;
+         background-color: #FF7628;
+         outline: none;
+         cursor: pointer;
+         transition: 0.3s;
+         margin: auto;
+         height: 65px;
+         width: 483px;
+         font-weight: 600;
+         font-size: 23px;
+         line-height: 28px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+ }
+ .form_button1 {
+          padding: 12px 117px;
+          border: none;
+          border-radius: 4px;
+          color : #F3F3F3;
+          background-color: #8F8F8F;
+          outline: none;
+          cursor: pointer;
+          transition: 0.3s;
+          margin: auto;
+          height: 44px;
+          margin-top: 42px;
+          width: 325px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+         font-family: 'Jost', sans-serif;
+         font-style: normal;
+  }
+
+ .form_title {
+          text-align: center;
+          margin: 20px 40px 62px;
+          font-weight: normal;
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 50px;
+          line-height: 60px;
+  }
+
+  .form_grup, .form_grup2{
+        position: relative;
+        text-align: center;
+        margin: 82px 0 0;
+}
+
+
+.form_button:hover{
+  box-shadow: 0 0 20px #FF7628;
+}
+
+.form_button:focus{
+  box-shadow: 0px 4px 11px #FF7628;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  height: 65px;
+  outline: 0;
+  border-radius: 46px;
+  padding: 17px 30px;
+  background-color: rgba(255, 183, 136, 0.8);
+  color: rgba(0, 0, 0, 0.65);
+  width: 483px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+ label {
+   position:absolute;
+   bottom:80px;
+   left: 12px;
+   pointer-events:none;
+   white-space:nowrap;
+   max-width:100%;
+   overflow:hidden;
+   text-overflow:ellipsis;
+   color: #fff;
+   font-weight: 600;
+   font-size: 23px;
+   line-height: 28px;
+   font-family: 'Montserrat', sans-serif;
+   font-style: normal;
+ }
+
+#info {
+  padding: 50px 0 75px;
+  color: #FF7628;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
+
+
+.konec_saita{
+  margin: 250px 0 0;
+  width: 95%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 3px solid #FF7628;
+}
+.kontakti{
+  display: block;
+  flex-wrap: wrap;
+  height: 210px;
+  margin: 0;
+}
+.logo{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.history-sleva{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  float: left;
+  flex-basis: 44%;
+  padding: 40px 0  0;
+}
+.history-sprava{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  line-height: 1.5;
+  color: #FFFFFF;
+  float: right;
+  text-align: right;
+  padding:52px 0 0;
+  flex-basis: 44%;
+}

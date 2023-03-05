@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>КИНОБОНЧ</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href = "font/stylesheet.css" rel = "stylesheet" type = "text/css">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="navbar">
+			<a id = 'what' href="#what">О мероприятии</a>
+			<a href="#films">Фильмы</a>
+			<a href="#where">Где и Когда?</a>
+			<a class='registr' href="#registr">Регистрация</a>
+  </nav>
+	<div class="container">
+		<div class='logic'><img src="img/logo.svg"></div>
+		<div class='opisanie'>Это мероприятие созданное и дальше вы там сами что-то допишете,яуверена)))
+Тут должно быть хотя бы три строчки, чтобы это нормально смотрелось, бла
+А еще тут будет написано что это меро оргает Штаб СПбГУТ</div>
+		<div id='films' class='zagolovok'>Фильмы</div>
+
+		<!-- Slider main container -->
+		<div class="swiper">
+		  <!-- Additional required wrapper -->
+		  <div class="swiper-wrapper">
+		    <!-- Slides -->
+		    <div class="swiper-slide"><a id='button_1'><img src="img/gosling.png"><div class='nazvanie'>Название</div></a></div>
+		    <div class="swiper-slide"><a id='button_2'><img src="img/gosling.png"><div class='nazvanie'>Название</div></a></div>
+		    <div class="swiper-slide"><a id='button_3'><img src="img/gosling.png"><div class='nazvanie'>Название</div></a></div>
+		  </div>
+			<div class="swiper-pagination"></div>
+		  <!-- If we need scrollbar -->
+		  <div class="swiper-scrollbar"></div>
+		</div>
+
+		<script type="module">
+	  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+
+		const swiper = new Swiper('.swiper', {
+		  // Optional parameters
+			autoHeight: true,
+			spaceBetween: 72,
+			slidesPerView: 1,
+			breakpoints: {
+				800: {
+          slidesPerView: 2
+        },
+        1300: {
+          slidesPerView: 3
+        }
+			},
+			// And if we need scrollbar
+		  scrollbar: {
+		    el: '.swiper-scrollbar',
+		  },
+		});
+	</script>
+	<div id='opis_film'>
+	 <div id="kino_1">
+		 <div class='flex'>
+			<div class='treiler'>
+		 <iframe width="560" height="315" src="https://www.youtube.com/embed/SDhGly0CgvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	 	</div>
+		 	<div class='opis_text'>
+			 <div class='opis_nazv'>
+				 Драйв
+			 </div>
+			 <div class='opis_ocenka'>
+				 7.8 		1999, фэнтези, приключения 	США 		2 ч 4 мин		 12+
+			 </div>
+			 <div class='opis_pereskaz'>
+				 Молчаливый водитель спасает девушку от гангстеров. Неонуар с Райаном Гослингом и пульсирующим саундтреком
+			 </div>
+			 </div>
+			 </div>
+	</div>
+
+	 <div id="kino_2">
+		 <div class='flex'>
+		 <div class='treiler'>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/SDhGly0CgvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		 <div class='opis_text'>
+			<div class='opis_nazv'>
+				Драйв
+			</div>
+			<div class='opis_ocenka'>
+				7.8 		1999, фэнтези, приключения 	США 		2 ч 4 мин		 12+
+			</div>
+			<div class='opis_pereskaz'>
+				Молчаливый водитель спасает девушку от гангстеров. Неонуар с Райаном Гослингом и пульсирующим саундтреком
+			</div>
+			</div>
+			</div>
+	</div>
+
+	<div id="kino_3">
+		<div class='flex'>
+		<div class='treiler'>
+	 <iframe width="560" height="315" src="https://www.youtube.com/embed/SDhGly0CgvQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ 		</div>
+		<div class='opis_text'>
+		 <div class='opis_nazv'>
+			 Драйв
+		 </div>
+		 <div class='opis_ocenka'>
+			 7.8 		1999, фэнтези, приключения 	США 		2 ч 4 мин		 12+
+		 </div>
+		 <div class='opis_pereskaz'>
+			 Молчаливый водитель спасает девушку от гангстеров. Неонуар с Райаном Гослингом и пульсирующим саундтреком
+		 </div>
+		 </div>
+		 </div>
+	</div>
+</div>
+
+	<div id='where' class='zagolovok'>Пойдем  в кино</div>
+	<div class='gdeikogda'>
+		<div class='gdeikogdachild'>
+		<div class='kogda'>
+			29 февраля 25:00
+		</div>
+		<div class='gde'>
+			пр. Большевиков, 22
+		</div>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.8990980705348!2d30.486598939957624!3d59.90262291803857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962e5e7e2f6933%3A0xb7f03a4f1735f586!2z0L_RgC4g0JHQvtC70YzRiNC10LLQuNC60L7QsiwgMjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTMzODI!5e0!3m2!1sru!2sru!4v1677971916620!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+
+
+
+  <a id='registr' href="#iw-modal3" class="iw-modal-btn">пойдем</a>
+    		<div id="iw-modal3" class="iw-modal">
+    		        <div class="iw-modal-wrapper">
+    		          <div class="iw-CSS-modal-inner">
+    		             <div class="iw-modal-header">
+    		                <h3 class="iw-modal-title-1">Пойдем в кино</h3>
+    										<div class="iw-modal-title-2">
+														Скорее заполняй заявку, чтобы занять
+														самые удобные места в зале </div>
+    		                <a href="#close" title="Закрыть" class="iw-close">×</a>
+    		             </div>
+    		             <div class="iw-modal-text">
+    									 <iframe name="index.html" id="https://stayintouch2021.ru" style="display:none;" onload="if(submitted)  {window.location='#iw-modal4';}"></iframe>
+
+    						 			<form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLScQHLICIWTBclCevKLdrFtngPlarn2AzxIpUdK7IT7dUiKsXA/formResponse" method="post" target="index.html"
+    						 			   onsubmit="submitted=true;">
+    						 			     <div class="form_grup">
+    						 			        <input class="username" name="entry.1843421133" placeholder="Иванов Иван Иванович">
+    						 			        <label for="username">ФИО</label>
+    						 			      </div>
+    												<div class="form_grup2">
+    						 			        <input class="password" name="entry.1486162881" placeholder="СПО Орбита">
+    						 			        <label for="password">Название отряда</label>
+    						 			      </div>
+    						 			      <div class="form_grup2">
+    						 			        <input class="password" name="entry.36534966" placeholder="https://vk.com/zapeka_infinity">
+    						 			        <label for="password">Ссылка на ВК</label>
+    						 			      </div>
+														<div class="form_grup2">
+    						 			        <input class="password" name="entry.1739243731" placeholder="1">
+    						 			        <label for="password">Количество билетов</label>
+    						 			      </div>
+														 <div id="info">Осталось билетов: <h id='infokol'></h></div>
+    						 			      <a  href="#iw-modal4"><input type="submit" class ='form_button' value="Отправить данные"></a>
+
+    						 			</form>
+    		         </div>
+    		      </div>
+    		    </div>
+    		  </div>
+
+
+          <div id="iw-modal4" class="iw-modal">
+                  <div class="iw-modal-wrapper1">
+                    <div class="iw-CSS-modal-inner1">
+                       <div class="iw-modal-header">
+                          <h3 class="iw-modal-title-3">Спасибо<br>за регистрацию!</h3>
+                          <div class="iw-modal-title-4">В ближайщее время с тобой свяжутся организаторы</div>
+													<a href="index.html" title="Закрыть" class="iw-close">×</a>
+													<img src="img/sosmislom.svg">
+                       </div>
+                </div>
+              </div>
+            </div>
+
+	</div>
+
+	<div class='konec_saita'>
+		<div class="container">
+			<div class='kontakti'>
+				<div class='history-sleva'>
+		  		<img class="logo" src="img/logo_shso.svg">
+					<img class="logo" src="img/logo_univers.svg">
+		  </div>
+		    <div class='history-sprava'>
+		  	8 (911) 815-50-29<br>а у нас есть почта?
+		  </div>
+			</div>
+		</div>
+	</div>
+
+
+ </body>
+</html>
